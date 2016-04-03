@@ -1,6 +1,6 @@
 FROM centos
 
-MAINTAINER takke <takke30@gmail.com>
+MAINTAINER hotchemi <hot.chemistry21@gmail.com>
 
 # Epel
 # RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
@@ -34,7 +34,7 @@ RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui --for
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui --force -a --filter platform-tools 
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui --force -a --filter build-tools-23.0.1 
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui --force -a --filter android-23 
-RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui --force -a --filter android-19 
+RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui --force -a --filter android-22
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui --force -a --filter extra 
 RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui --force -a --filter sys-img-armeabi-v7a-android-19 
 
@@ -52,7 +52,7 @@ RUN cd /usr/local/ && curl -L -O https://www.apache.org/dist/ant/binaries/apache
 RUN cd /usr/local/ && curl -L -O http://services.gradle.org/distributions/gradle-2.2.1-all.zip && unzip -o gradle-2.2.1-all.zip
 
 # Environment variables
-ENV JAVA_HOME /usr/lib/jvm/java-1.7.0-openjdk
+ENV JAVA_HOME /usr/lib/jvm/java-1.8.0-openjdk
 ENV ANDROID_HOME /usr/local/android-sdk-linux
 #ENV ANDROID_NDK_HOME /usr/local/android-ndk-r9b
 ENV ANT_HOME /usr/local/apache-ant-1.9.6
