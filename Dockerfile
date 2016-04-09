@@ -42,12 +42,6 @@ RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --no-ui --for
 # Install Android NDK
 #RUN cd /usr/local && curl -L -O http://dl.google.com/android/ndk/android-ndk-r9b-linux-x86_64.tar.bz2 && tar xf android-ndk-r9b-linux-x86_64.tar.bz2
 
-# Install Apache-Ant
-RUN cd /usr/local/ && curl -L -O https://www.apache.org/dist/ant/binaries/apache-ant-1.9.6-bin.tar.gz && tar xf apache-ant-1.9.6-bin.tar.gz
-
-# Install Maven
-# RUN cd /usr/local/ && curl -L -O http://ftp.tsukuba.wide.ad.jp/software/apache/maven/maven-3/3.1.1/binaries/apache-maven-3.1.1-bin.tar.gz && tar xf apache-maven-3.1.1-bin.tar.gz
-
 # Install Gradle
 RUN cd /usr/local/ && curl -L -O http://services.gradle.org/distributions/gradle-2.2.1-all.zip && unzip -o gradle-2.2.1-all.zip
 
